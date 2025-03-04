@@ -13,6 +13,6 @@ public class MonsterTruck extends Truck{
     }
 
     public String toString(){
-        return "monster vroomvroom";
+        return "monster " + super.toString();
     }
 }
