@@ -1,4 +1,4 @@
-/*import inheritance.GroceryBill.*;
+import inheritance.GroceryBill.*;
 
 public class TestDiscountBill
 {
@@ -95,4 +95,4 @@ public class TestDiscountBill
     }
 
 
-}*/
+}
