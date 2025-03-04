@@ -1,4 +1,4 @@
-/*import inheritance.Account.*;
+import inheritance.Account.*;
 
 import java.util.Arrays;
 
@@ -100,4 +100,4 @@ public class TestFiltered {
             System.out.println("All tests passed.");
         }
     }
-}*/
+}
