@@ -1,33 +1,35 @@
 import inheritance.GroceryBill;
 
 public class DiscountBill extends GroceryBill{
-    private final boolean preferred;
-    private double discountTotal = 0;
-    private int itemsDiscounted = 0;
+    private boolean preferred;
+    private int discountCount = 0;
     private double discountAmount = 0;
 
-    public DiscountBill(Employee clerk, boolean preferred){
+    public DiscountBill(Employee clerk, boolean preferred) {
         super(clerk);
         this.preferred = preferred;
     }
 
-    public void add(Item i){
-        if(preferred && i.getDiscount() > 0){
-            discountTotal += i.getPrice() - i.getDiscount();
-            itemsDiscounted++;
+    public void add(Item i) {
+        if(preferred && i.getDiscount() > 0)
+        {
             discountAmount += i.getDiscount();
+            discountCount++;
             super.add(i);
         }
-        else{
+        else
+        {
             super.add(i);
         }
     }
 
-    public double getTotal(){
-       if(preferred){
+    public double getTotal() {
+       if(preferred)
+       {
            return super.getTotal() - discountAmount;
        }
-       else{
+       else
+       {
            return super.getTotal();
        }
     }
@@ -37,7 +39,7 @@ public class DiscountBill extends GroceryBill{
     }
 
     public int getDiscountCount(){
-        return itemsDiscounted;
+        return discountCount;
     }
 
     public double getDiscountPercent(){

@@ -1,8 +1,4 @@
 public class MonsterTruck extends Truck{
-    public MonsterTruck(){
-        super();
-    }
-
     public void m1(){
         System.out.print("monster 1");
     }
