@@ -26,11 +26,13 @@ public class DiscountBill extends GroceryBill{
     public double getTotal() {
        if(preferred)
        {
-           return super.getTotal() - discountAmount;
+           double preferredTotal = super.getTotal() - discountAmount;
+           return preferredTotal;
        }
        else
        {
-           return super.getTotal();
+           double total = super.getTotal();
+           return total;
        }
     }
 
