@@ -24,7 +24,7 @@ public class DiscountBill extends GroceryBill{
     }
 
     public double getTotal() {
-       if(preferred)
+       if(preferred == true)
        {
            double preferredTotal = super.getTotal() - discountAmount;
            return preferredTotal;
@@ -45,6 +45,7 @@ public class DiscountBill extends GroceryBill{
     }
 
     public double getDiscountPercent(){
-        return 100 * (discountAmount / super.getTotal());
+        double discountPercent = 100 * (discountAmount / super.getTotal());
+        return discountPercent;
     }
 }

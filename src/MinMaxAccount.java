@@ -10,14 +10,6 @@ public class MinMaxAccount extends BankingAccount {
         max = this.getBalance();
     }
 
-    public int getMin() {
-        return min;
-    }
-
-    public int getMax() {
-        return max;
-    }
-
     public void debit(Debit d) {
         super.debit(d);
         if(this.getBalance() > max)
@@ -41,5 +33,13 @@ public class MinMaxAccount extends BankingAccount {
         {
             min = this.getBalance();
         }
+    }
+
+    public int getMin() {
+        return min;
+    }
+
+    public int getMax() {
+        return max;
     }
 }
